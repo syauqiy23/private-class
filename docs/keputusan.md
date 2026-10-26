@@ -2,6 +2,16 @@
 
 Terbaru di atas. Format: tanggal — keputusan — alasan.
 
+## 2026-10-26 — Harga private direvisi ke v2 (usulan, belum dikunci)
+
+- **Keputusan:** draf harga v1 diganti v2 yang berbasis riset pasar: founding Rp2,5–5jt per paket, normal Rp3,5–7,5jt,
+  Full System Rp15jt/Rp20jt.
+- **Alasan:** v1 cuma diturunin dari plan lama tanpa pembanding pasar, hasilnya kemahalan sekitar 20–30% buat yang belum punya
+  testimoni. Pembandingnya private Meta Ads (Rp2–7,5jt), kelas AI (Rp250rb–2,5jt), dan jasa bot (Rp5–60jt).
+- **Belum final:** dites dulu ke 5 calon peserta. Detail di `riset-pricing.md`.
+- **Catatan:** fokus diskusi digeser dari riset teknis ke persiapan jualan (offer, konten, LP, script DM). Riset teknis
+  lanjutan (cocokin `utm_term`, opsi inbound WA) ditunda sampai ada peserta.
+
 ## 2026-10-26 — Scalev dipakai sebagai sumber data order buat R1 & R4
 
 - **Temuan:** order Scalev nyimpen UTM lengkap dari iklan Meta, jadi atribusi per campaign/iklan bisa. Bikin order,

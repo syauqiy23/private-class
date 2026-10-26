@@ -1,6 +1,6 @@
 # Plan Kelas Private — 5 Paket Result
 
-Terakhir diupdate: 2026-10-26 · Status: **draf, belum ada peserta**
+Terakhir diupdate: 2026-10-26 (harga v2) · Status: **draf, belum ada peserta**
 
 ## Ringkasan
 
@@ -150,20 +150,23 @@ Ide bundle:
 - **Paket Jualan Otomatis** = R4 + R2.
 - **Full System** = R1–R5.
 
-## Harga (draf, belum dikunci)
+## Harga v2 (berbasis riset pasar, belum dikunci)
 
-Diturunin dari harga private plan v1 dan disesuaikan sama jumlah sesi. **Belum dites ke calon peserta.**
+Draf v1 ternyata kemahalan sekitar 20–30% dan belum ada harga perkenalan. Data pembanding dan analisanya ada di
+`riset-pricing.md`. Harga di bawah buat **online**; offline +Rp1–1,5jt per paket. **Belum dites ke calon peserta.**
 
-| Paket | Sesi (draf) | Online (draf) | Offline (draf) |
+| Paket | Sesi | Founding (5 peserta pertama) | Normal |
 | --- | --- | --- | --- |
-| Konsultasi / audit 1 sesi | 1 | Rp750rb | Rp1,5jt |
-| R1 Ads Intelligence | 3 | Rp6jt | Rp7,5jt |
-| R2 AI Agent Komen & DM | 3 | Rp4,5jt | Rp6jt |
-| R3 Content Automation | 3 | Rp4,5jt | Rp6jt |
-| R4 Order Automation | 4 | Rp7,5jt | Rp9,5jt |
-| R5 Ads Automation | 4 | Rp9jt | Rp11,5jt |
-| Paket Advertiser (R1 + R5) | 6 | Rp13jt | Rp16jt |
-| Full System (R1–R5) | 12 | Rp25jt | Rp30jt |
+| Konsultasi / audit | 1 | Rp500rb | Rp750rb |
+| R1 Ads Intelligence | 3 | Rp3,5jt | Rp5jt |
+| R2 AI Agent Komen & DM | 3 | Rp2,5jt | Rp3,5jt |
+| R3 Content Automation | 3 | Rp2,5jt | Rp3,5jt |
+| R4 Order Automation | 4 | Rp4jt | Rp6jt |
+| R5 Ads Automation | 4 | Rp5jt | Rp7,5jt |
+| Paket Advertiser (R1 + R5) | 6 | Rp7,5jt | Rp11jt |
+| Full System (R1–R5) | 12 | Rp15jt | Rp20jt |
+
+Opsi buat market sensitif harga: private grup kecil (3–5 orang) Rp1,5–2jt per orang, terutama buat R2/R3.
 
 Aturan harga yang dibawa dari v1:
 - Harga konsultasi memotong harga paket kalau peserta lanjut dalam 14 hari.
@@ -177,7 +180,8 @@ Aturan harga yang dibawa dari v1:
 - [x] ~~Scalev API bisa bikin order?~~ **Ya**, `POST /v3/orders` + kirim akses digital. Stok kemungkinan bisa, belum dites di produk fisik.
 - [ ] `utm_term` di order itu campaign id atau adset id Meta? (buat join spend ↔ order)
 - [ ] Inbound WA: app Meta sendiri ikut subscribe ke WABA yang udah nyambung Scalev, atau pakai nomor terpisah?
-- [ ] Harga final per paket. Dites dulu ke 5 calon peserta.
+- [ ] Harga final per paket. Draf v2 udah ada (`riset-pricing.md`), tinggal dites ke 5 calon peserta pakai harga founding.
+- [ ] Cek ulang langsung harga pembanding utama (Raya School, Insting, Majapahit) sebelum dikunci.
 - [ ] Limit free tier Supabase/Cloudflare + estimasi biaya API per bulan buat 1 bisnis (biar bisa dijelasin ke peserta).
 - [ ] Harga template message WABA Indonesia terbaru.
 - [ ] Mau buka paket mana duluan? (usulan: R1 dulu, karena paling beda dan paling nyambung ke target advertiser)
@@ -185,7 +189,7 @@ Aturan harga yang dibawa dari v1:
 ## Next steps
 
 - [x] Cek API Scalev (UTM, order, stok, webhook, WABA) → `riset-api-scalev.md`.
-- [ ] Cocokkan `utm_term` ke Meta Ads API.
+- [x] Riset & analisa pricing pasar → `riset-pricing.md` (harga v2).
 - [ ] Bikin demo R1 di bisnis sendiri: screenshot/video chat WA "laporan kemarin" pakai data real. Ini bahan jualan utama.
 - [ ] Susun form intake + checklist prasyarat.
 - [ ] Tawarkan ke 5 calon peserta (DM Threads yang udah nanya), terus kunci harga.
