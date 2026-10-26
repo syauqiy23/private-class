@@ -1,0 +1,33 @@
+# Log Keputusan
+
+Terbaru di atas. Format: tanggal — keputusan — alasan.
+
+## 2026-10-26 — Fokus private dulu, ecourse/LMS ditunda
+
+- **Keputusan:** jualan private dulu. Ecourse dan LMS (rekaman) ditunda.
+- **Alasan:** belum ada waktu buat rekaman.
+- **Dampak:** plan v1 (ecourse + private) dipindah ke `arsip-kurikulum-v1.md`.
+
+## 2026-10-26 — Private dijual per 5 result
+
+- **Keputusan:** private terdiri dari 5 paket result: R1 Ads Intelligence (Meta Ads × WA × Scalev),
+  R2 AI Agent Komen & DM, R3 Content Automation, R4 Order Automation (WABA), dan R5 Ads Automation.
+- **Alasan:** dijual per hasil yang jalan di akun peserta, dengan data real (Meta + Scalev), bukan tebakan. Target utamanya
+  advertiser, IMers, dan pemain Meta Ads.
+- **Detail:** `plan-private.md`.
+
+## 2026-10-26 — Arsitektur tanpa VPS
+
+- **Keputusan:** kerja terjadwal jalan di scheduled task Claude (cloud), sedangkan kerja real-time (WA, komen, DM)
+  jalan di serverless (Supabase Edge Functions / Cloudflare Workers, free tier). Laptop nggak perlu nyala.
+- **Catatan:** tetap ada biaya pemakaian (Claude, Anthropic API, template WABA). Ini wajib dijelasin jujur ke peserta.
+
+## 2026-10-26 — Repo ini jadi sumber kebenaran
+
+- **Keputusan:** semua plan dan hasil diskusi disimpan sebagai Markdown di repo `private-class`.
+- **Alasan:** biar siapa pun yang punya akses repo bisa lanjut tanpa ngulang chat.
+
+## 2026-10-23 — Plan v1: kurikulum & pricing ecourse + private
+
+- Disusun di doc Claude "Kurikulum & Pricing Kelas AI" (https://claude.ai/artifact/MXG1FnNtYCn5ARb2wZQ3Jt).
+- Salinannya ada di `arsip-kurikulum-v1.md`. Status sekarang: ditunda.
