@@ -2,6 +2,13 @@
 
 Terbaru di atas. Format: tanggal — keputusan — alasan.
 
+## 2026-10-26 — Scalev dipakai sebagai sumber data order buat R1 & R4
+
+- **Temuan:** order Scalev nyimpen UTM lengkap dari iklan Meta, jadi atribusi per campaign/iklan bisa. Bikin order,
+  cek status, kirim akses digital, dan webhook pembayaran juga tersedia.
+- **Belum diputuskan:** jalur WA masuk (Scalev nggak nge-forward pesan WA masuk lewat webhook).
+- **Detail:** `riset-api-scalev.md`.
+
 ## 2026-10-26 — Fokus private dulu, ecourse/LMS ditunda
 
 - **Keputusan:** jualan private dulu. Ecourse dan LMS (rekaman) ditunda.

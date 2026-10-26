@@ -41,8 +41,9 @@ Yang dibangun:
 Output: owner bisa nanya performa iklan pakai data real dari WA, plus dapat laporan pagi otomatis.
 
 Catatan teknis:
-- **Atribusi per campaign** butuh order Scalev bawa UTM atau ad id. Kalau nggak ada, laporannya cuma total
-  (spend total vs uang masuk total), belum bisa per campaign. → cek apakah Scalev nyimpen UTM (lihat *Pertanyaan terbuka*).
+- **Atribusi per campaign: bisa.** Order Scalev nyimpen `utm_campaign`, `utm_content`, `utm_term` dari iklan Meta
+  (terbukti di data real, lihat `riset-api-scalev.md`). Syaratnya, URL iklan peserta wajib pakai parameter UTM yang konsisten.
+- Pesan WA masuk **nggak** lewat webhook Scalev, jadi bot butuh webhook Meta sendiri atau nomor terpisah (lihat riset).
 - Pesan yang dikirim duluan oleh bot (laporan pagi) di luar jendela 24 jam = **template message WABA, ada biaya per pesan**.
 
 ### R2 — AI Agent Komen & DM
@@ -116,7 +117,8 @@ Ini buat ngurangin risiko sesi nganggur gara-gara nunggu Meta.
 | Business Manager Meta terverifikasi | R1, R2, R4, R5 | Akses API & WABA |
 | Meta App (mode live) + izin yang dibutuhkan | R1, R2, R4, R5 | App review bisa berminggu-minggu |
 | Nomor WA khusus bisnis (belum dipakai di WA app biasa) | R1, R4 | Syarat WhatsApp Cloud API |
-| Akun Scalev aktif + API key | R1, R4 | Sumber data order & transfer |
+| Akun Scalev aktif + API key, **plan Basic ke atas** | R1, R4 | Sumber data order & transfer; webhook cuma ada di Basic+ |
+| URL iklan Meta pakai UTM konsisten (campaign, content, term) | R1, R5 | Biar order bisa diatribusi per campaign/iklan |
 | Akun Claude Pro/Max + kunci API Anthropic | Semua | Scheduled task + real-time |
 | Akun Supabase/Cloudflare (gratis) | R1, R2, R4 | Webhook & database |
 | Ad account dengan riwayat spend | R1, R5 | Data buat dianalisa |
@@ -171,8 +173,10 @@ Aturan harga yang dibawa dari v1:
 
 ## Pertanyaan terbuka
 
-- [ ] Scalev nyimpen UTM / ad id di data order nggak? Ini nentuin R1 bisa atribusi per campaign atau cuma total.
-- [ ] Scalev API bisa bikin order + cek stok? Endpoint apa aja yang tersedia? (buat R4)
+- [x] ~~Scalev nyimpen UTM?~~ **Ya**, lengkap di `metadata` order (2026-10-26, `riset-api-scalev.md`).
+- [x] ~~Scalev API bisa bikin order?~~ **Ya**, `POST /v3/orders` + kirim akses digital. Stok kemungkinan bisa, belum dites di produk fisik.
+- [ ] `utm_term` di order itu campaign id atau adset id Meta? (buat join spend ↔ order)
+- [ ] Inbound WA: app Meta sendiri ikut subscribe ke WABA yang udah nyambung Scalev, atau pakai nomor terpisah?
 - [ ] Harga final per paket. Dites dulu ke 5 calon peserta.
 - [ ] Limit free tier Supabase/Cloudflare + estimasi biaya API per bulan buat 1 bisnis (biar bisa dijelasin ke peserta).
 - [ ] Harga template message WABA Indonesia terbaru.
@@ -180,7 +184,8 @@ Aturan harga yang dibawa dari v1:
 
 ## Next steps
 
-- [ ] Jawab pertanyaan terbuka soal Scalev (UTM, endpoint order/stok).
+- [x] Cek API Scalev (UTM, order, stok, webhook, WABA) → `riset-api-scalev.md`.
+- [ ] Cocokkan `utm_term` ke Meta Ads API.
 - [ ] Bikin demo R1 di bisnis sendiri: screenshot/video chat WA "laporan kemarin" pakai data real. Ini bahan jualan utama.
 - [ ] Susun form intake + checklist prasyarat.
 - [ ] Tawarkan ke 5 calon peserta (DM Threads yang udah nanya), terus kunci harga.
