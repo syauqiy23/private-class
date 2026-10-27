@@ -1,6 +1,6 @@
 # Plan Kelas Private — 5 Paket Result
 
-Terakhir diupdate: 2026-10-26 (harga v2) · Status: **draf, belum ada peserta**
+Terakhir diupdate: 2026-10-27 (harga flat Rp1,49jt + copy) · Status: **draf, belum ada peserta**
 
 ## Ringkasan
 
@@ -150,7 +150,15 @@ Ide bundle:
 - **Paket Jualan Otomatis** = R4 + R2.
 - **Full System** = R1–R5.
 
-## Harga v2 (berbasis riset pasar, belum dikunci)
+## Harga yang dipakai sekarang: Rp1.490.000 flat per topik (diputuskan 2026-10-27)
+
+Owner mutusin **semua topik sama: Rp1.490.000**, dengan positioning "buat yang nggak sabar, harga ini buat nuker
+waktu & pengalaman saya, bukan harga materi". Format yang diasumsikan di copy: **2 sesi live @ ±2,5 jam (online) +
+support WA 14 hari** (belum dikonfirmasi owner). Copy lengkapnya di `copy-private.md`.
+
+Tabel v2 di bawah disimpan buat rujukan kalau nanti harga dinaikkan (misalnya setelah ada testimoni).
+
+## Harga v2 (berbasis riset pasar, rujukan)
 
 Draf v1 ternyata kemahalan sekitar 20–30% dan belum ada harga perkenalan. Data pembanding dan analisanya ada di
 `riset-pricing.md`. Harga di bawah buat **online**; offline +Rp1–1,5jt per paket. **Belum dites ke calon peserta.**
@@ -180,7 +188,8 @@ Aturan harga yang dibawa dari v1:
 - [x] ~~Scalev API bisa bikin order?~~ **Ya**, `POST /v3/orders` + kirim akses digital. Stok kemungkinan bisa, belum dites di produk fisik.
 - [ ] `utm_term` di order itu campaign id atau adset id Meta? (buat join spend ↔ order)
 - [ ] Inbound WA: app Meta sendiri ikut subscribe ke WABA yang udah nyambung Scalev, atau pakai nomor terpisah?
-- [ ] Harga final per paket. Draf v2 udah ada (`riset-pricing.md`), tinggal dites ke 5 calon peserta pakai harga founding.
+- [x] ~~Harga final per paket.~~ **Rp1.490.000 flat per topik** (2026-10-27).
+- [ ] Format per topik: beneran 2 sesi + support WA 14 hari? Jumlah slot per bulan berapa? Link booking?
 - [ ] Cek ulang langsung harga pembanding utama (Raya School, Insting, Majapahit) sebelum dikunci.
 - [ ] Limit free tier Supabase/Cloudflare + estimasi biaya API per bulan buat 1 bisnis (biar bisa dijelasin ke peserta).
 - [ ] Harga template message WABA Indonesia terbaru.
@@ -190,6 +199,8 @@ Aturan harga yang dibawa dari v1:
 
 - [x] Cek API Scalev (UTM, order, stok, webhook, WABA) → `riset-api-scalev.md`.
 - [x] Riset & analisa pricing pasar → `riset-pricing.md` (harga v2).
+- [x] Copy 5 topik + highlight "yang nggak sabar" + template WA → `copy-private.md` (DRAFT).
+- [ ] Owner konfirmasi asumsi di `copy-private.md` (jumlah sesi, slot, link booking, garansi).
 - [ ] Bikin demo R1 di bisnis sendiri: screenshot/video chat WA "laporan kemarin" pakai data real. Ini bahan jualan utama.
 - [ ] Susun form intake + checklist prasyarat.
 - [ ] Tawarkan ke 5 calon peserta (DM Threads yang udah nanya), terus kunci harga.

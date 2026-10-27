@@ -2,6 +2,15 @@
 
 Terbaru di atas. Format: tanggal — keputusan — alasan.
 
+## 2026-10-27 — Harga flat Rp1.490.000 per topik + angle "buat yang nggak sabar"
+
+- **Keputusan (owner):** semua topik private dihargai sama, Rp1.490.000. Belum ada materi rekaman, jadi privat dijual
+  ke yang nggak sabar. Harga diposisikan sebagai tuker waktu, pengalaman, dan ilmu owner (owner bukan pengangguran dan nggak
+  cari nafkah dari jualan kelas).
+- **Asumsi di copy (belum dikonfirmasi):** 2 sesi live @ ±2,5 jam online + support WA 14 hari. Kalau dibikin 3–4 sesi,
+  harga per sesi jatuh di bawah pasar dan bentrok sama positioning.
+- **Output:** `copy-private.md`.
+
 ## 2026-10-26 — Harga private direvisi ke v2 (usulan, belum dikunci)
 
 - **Keputusan:** draf harga v1 diganti v2 yang berbasis riset pasar: founding Rp2,5–5jt per paket, normal Rp3,5–7,5jt,
